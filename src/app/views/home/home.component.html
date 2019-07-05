@@ -1,0 +1,39 @@
+<main>
+  <table>
+    <thead>
+      <tr>
+        <th class="rank">Ranks</th>
+        <th>Name</th>
+        <th class="price">Price</th>
+        <th class="change">Change</th>
+        <th class="chart">Chart</th>
+        <th class="trade">Trade</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>
+          <div>{{ item.rank }}</div>
+        </td>
+        <td class="info-wrapper">
+          <a [routerLink]="[ '/path' ]" routerLinkActive="active">
+            <img src="{{ item.iconUrl }}" alt="{{ item.name }}">
+            <div class="name">{{ item.name }}</div>
+          </a>
+        </td>
+        <td>
+          <div>{{ price(item.price) }} $</div>
+        </td>
+        <td>
+          <div [ngClass]="(item.change < 0)?'red':'green'">{{ item.change }}</div>
+        </td>
+        <td>
+          <app-chart [coinData]="item.history" [coinDataLabels]="labelList"></app-chart>
+        </td>
+        <td>
+          <button>Buy</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</main>

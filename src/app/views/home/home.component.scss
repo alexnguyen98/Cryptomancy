@@ -1,0 +1,88 @@
+main {
+  padding: 30px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+
+thead {
+  th {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+    padding: 10px;
+  }
+  .rank {
+    width: 8%;
+  }
+  .price {
+    width: 15%;
+  }
+  .change {
+    width: 10%;
+  }
+  .chart {
+    width: 20%;
+    padding-left: 40px;
+  }
+  .trade {
+    width: 10%;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
+
+tbody {
+  td {
+    border-top: 1px solid rgb(236, 236, 236);
+    padding: 20px 10px;
+  }
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.info-wrapper {
+  a {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    .name {
+      margin-left: 20px;
+      color: black;
+    }
+    &:hover {
+      .name {
+        color: blue;
+      }
+    }
+  }
+}
+
+button {
+  background: rgb(19, 189, 90);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  &:hover {
+    background: rgb(28, 209, 103);
+  }
+}
